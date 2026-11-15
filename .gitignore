@@ -1,1 +1,3 @@
 .env
+guestbook/k8s/secret.yaml
+guestbook/k8s/secret.yaml
