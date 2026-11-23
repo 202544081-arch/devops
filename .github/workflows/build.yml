@@ -1,0 +1,15 @@
+name: Build and Push Image
+on:
+push:
+branches: [main]
+paths:                       
+# main 브랜치와 paths 조건을 만족할 때 실행
+# 앱이 바뀐 경우에만 실행- 'guestbook/**'- '.github/workflows/build.yml'
+pull_request:
+branches: [main]             
+# PR 검사
+workflow_dispatch:             
+# 수동 실행
+env:
+REGISTRY: ghcr.io
+IMAGE_NAME: ${{ github.repository_owner }}/guestbook
